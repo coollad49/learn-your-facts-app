@@ -60,7 +60,7 @@ const Content = () => {
         };
     
         blog();
-    }, []);
+    }, [imgUrl, slug]);
 
     const renderFunFacts = (fun_facts) => {    
         // Check if fun_facts is an array or a string
@@ -117,7 +117,7 @@ const Content = () => {
             <div className="max-w-2xl mx-auto antialiased py-8 relative  flex flex-col gap-5">
                 <h1 className="text-3xl font-bold text-blue-500">{blogData.title}</h1>
                 <a className="text-sm " href="https://www.pexels.com">Photos provided by Pexels</a>
-                <img alt={''} src={imgUrl} width={800} height={500} className="rounded-lg"/>
+                <Image alt={''} src={imgUrl} width={800} height={500} className="rounded-lg"/>
                 <div className="flex flex-col gap-4 ">
                     <FunFactDisplay fact={blogData.content.introduction} />
                     <div>
